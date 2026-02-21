@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>AnyCPU;x86</Platforms>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="JVDTLabLib">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>18</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>2ab17740-0c41-11d7-916f-0003479beb3f</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KeibaAiDataImporter.Core\KeibaAiDataImporter.Core.csproj" />
+    <ProjectReference Include="..\KeibaAiDataImporter.Infrastructure\KeibaAiDataImporter.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AxJVDTLabLib">
+      <HintPath>C:\Program Files (x86)\JRA-VAN\Data Lab\AxJVDTLabLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="JVData_Struct.cs" />
+    <Content Include="JVData_Struct.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

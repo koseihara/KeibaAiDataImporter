@@ -1,0 +1,25 @@
+# Environment
+.env
+
+# Build results
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Generated files
+generated_ddl.sql
+generated_computed_columns.sql
+
+# Fetch history (runtime state)
+fetch_history.json
+
+# Log/error files
+build_log.txt
+errors*.txt
+
+# Claude Code
+.claude/
