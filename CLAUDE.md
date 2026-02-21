@@ -70,12 +70,8 @@ Record type IDs are 2-character codes: RA (race), H1/H6/HR (horse), O1-O6 (odds)
 
 ## Database Configuration
 
-Environment variables (with defaults):
-- `DB_HOST` = "localhost"
-- `DB_PORT` = "5433"
-- `DB_NAME` = "jra_db"
-- `DB_USER` = "postgre"
-- `DB_PASSWORD` = "password"
+DB connection is configured via `.env` file (see `.env.example` for the template).
+Variables: `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`
 
 ## Key Conventions
 
